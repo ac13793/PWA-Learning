@@ -14,7 +14,8 @@ window.addEventListener('load',  e => {
 
     if('serviceWorker' in navigator) {
         try {
-            navigator.serviceWorker.register('serviceWorker.js');
+            // navigator.serviceWorker.register('serviceWorker.js');
+            navigator.serviceWorker.register('serviceWorkerWithWorkbox.js');
             console.log('Service worker registered');
         } catch (error) {
             console.log('Service worker failed');

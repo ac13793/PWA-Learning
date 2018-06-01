@@ -41,6 +41,7 @@ async function networkFirst(req) {
     const cache = await caches.open('news-dynamic');
     try {
         const res = await fetch(req);
+        // Cloning the response because it can read only once
         cache.put(req, res.clone());
         return res;
     } catch(error) {
